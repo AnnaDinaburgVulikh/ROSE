@@ -66,7 +66,7 @@ def test_family(helpers):
         [r'''\'\w*\':\s\d*''',
          'please print the dictionary `ages`'],
         [r'''\'\w*\':\s\d*''',
-         '^[^{].*\b\d*\b'],
+         r'^[^{].*\b\d*\b'],
     ]
 
     helpers.test_assignment()

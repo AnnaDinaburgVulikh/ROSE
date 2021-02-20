@@ -55,9 +55,10 @@ class Test_helpers:
                 for data, expected_stdout in zip(self.input,
                                                  self.expected_stdout):
                     student_stdout = self.run_cmd(data)
-                    test_stdout = self.test_answers([expected_stdout],
-                                                    [student_stdout],
-                                                    word_pattern=self.exact_answer)
+                    test_stdout = self.test_answers(
+                                        [expected_stdout],
+                                        [student_stdout],
+                                        word_pattern=self.exact_answer)
             else:
                 student_stdout = self.run_cmd()
                 test_stdout = self.test_answers(self.expected_stdout,
